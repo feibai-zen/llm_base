@@ -36,6 +36,7 @@ SQLAlchemy==2.0.51
 PyYAML==6.0.3
 requests==2.34.2
 click==8.2.1
+ipython==9.0.1
 
 # Build Tools
 setuptools==78.1.1
