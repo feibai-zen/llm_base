@@ -6,6 +6,7 @@ langchain-community==0.4.2
 # LangGraph Workflow
 langgraph==1.2.5
 langgraph-checkpoint==4.1.1
+langgraph-checkpoint-sqlite==3.1.0
 langgraph-prebuilt==1.1.0
 langgraph-sdk==0.4.2
 
@@ -41,3 +42,6 @@ ipython==9.0.1
 # Build Tools
 setuptools==78.1.1
 wheel==0.45.1
+
+# Graph Visualization
+pygraphviz==1.14
