@@ -1,21 +1,22 @@
-cd /mnt/workspace/code/bk
-bash Miniconda3-latest-Linux-x86_64.sh
+# cd /mnt/workspace/code/softwares
+# bash Miniconda3-latest-Linux-x86_64.sh
 
-PATH="/root/miniconda3/bin:$PATH"
-source ~/.bashrc
+# 将miniconda 安装到 /mnt/workspace/miniconda3  目录下
 
+# echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> ~/.bashrc
+echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> /root/.bashrc
+# source ~/.bashrc
+source /root/.bashrc
+
+# 使用 conda 创建环境
 conda create -n llm_base python=3.13.12
+conda init
 conda activate llm_base
 
-
+# 安装 Python 依赖包
 cd /mnt/workspace/code/llm_base
 sudo apt update
 sudo apt install graphviz libgraphviz-dev pkg-config
 
 pip install --upgrade pip
 pip install -r requirements.txt
-
-# 使用 uv 进行管理
-uv init
-uv add langchain-deepseek
-uv remove langchain-deepseek

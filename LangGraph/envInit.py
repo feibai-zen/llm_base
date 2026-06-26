@@ -7,12 +7,14 @@ import os
 load_dotenv()
 API_KEY = os.getenv("SILICON_API_KEY")
 model = init_chat_model(
-    "Qwen/Qwen3-8B",
+    model="Qwen/Qwen3-8B",
     model_provider="openai",
     base_url="https://api.siliconflow.cn/v1",
     api_key=API_KEY,
     temperature=0.0
 )
+
+print(model.invoke("你好，我叫Zen"))
 
 
 def display_graph(app):
