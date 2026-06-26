@@ -104,7 +104,7 @@ def chat_with_flow(flow_path: str, session_id: str = None):
 
 if __name__ == "__main__":
     # 流程文件路径
-    flow_file = "first-chat-agent.json"
+    flow_file = "../resources/flow/first-chat-agent.json"
 
     # 检查文件是否存在
     if not os.path.exists(flow_file):
