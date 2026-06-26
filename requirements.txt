@@ -45,3 +45,7 @@ wheel==0.45.1
 
 # Graph Visualization
 pygraphviz==1.14
+
+# Vector DB
+pymilvus==3.0.0
+milvus_lite==3.0
