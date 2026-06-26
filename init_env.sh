@@ -14,3 +14,8 @@ sudo apt install graphviz libgraphviz-dev pkg-config
 
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# 使用 uv 进行管理
+uv init
+uv add langchain-deepseek
+uv remove langchain-deepseek
