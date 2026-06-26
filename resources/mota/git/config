@@ -1,0 +1,12 @@
+# SSH Config File
+# ~/.ssh/config
+
+Host github.com
+  HostName github.com
+  IdentityFile /mnt/workspace/git_key/id_rsa
+  IdentitiesOnly yes
+
+Host gitee.com
+  HostName gitee.com
+  IdentityFile /mnt/workspace/git_key/id_rsa
+  IdentitiesOnly yes
