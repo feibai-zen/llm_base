@@ -3,10 +3,10 @@
 
 # 将miniconda 安装到 /mnt/workspace/miniconda3  目录下
 
-# echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> ~/.bashrc
-echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> /root/.bashrc
-# source ~/.bashrc
-source /root/.bashrc
+echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> ~/.bashrc
+#echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> /root/.bashrc
+source ~/.bashrc
+#source /root/.bashrc
 
 # 使用 conda 创建环境
 conda create -n llm_base python=3.13.12
@@ -17,6 +17,11 @@ conda activate llm_base
 cd /mnt/workspace/code/llm_base
 sudo apt update
 sudo apt install graphviz libgraphviz-dev pkg-config
-
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# 注册 Jupyter 内核
+conda activate llm_base
+pip install ipykernel
+python -m ipykernel install --user --name llm_base --display-name "conda_llm_base"
+jupyter kernelspec remove llm_base
