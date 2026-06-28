@@ -1,5 +1,4 @@
-# SSH Config File
-# ~/.ssh/config
+# 将下面内容添加到： ~/.ssh/config
 
 Host github.com
   HostName github.com

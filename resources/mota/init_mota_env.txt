@@ -25,3 +25,14 @@ conda activate llm_base
 pip install ipykernel
 python -m ipykernel install --user --name llm_base --display-name "conda_llm_base"
 jupyter kernelspec remove llm_base
+
+##################################每次重启实例 需要做以下操作###############################
+
+echo 'PATH="/mnt/workspace/miniconda3/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+conda init
+conda activate llm_base
+
+pip install ipykernel
+python -m ipykernel install --user --name llm_base --display-name "conda_llm_base"
